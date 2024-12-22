@@ -19,12 +19,7 @@ export default function LoginPhoneScreen() {
           </Text>
         </View>
 
-        {/* Form */}
         <View>
-          <Text className="text-2xl text-white font-bold text-center">
-            Masuk
-          </Text>
-
           {/* Form */}
           <View className="mt-2 flex gap-2">
             <View>
@@ -56,9 +51,7 @@ export default function LoginPhoneScreen() {
           >
             <View className="flex flex-row items-center justify-center gap-2 w-full">
               <Monicon name="majesticons:key" color={Colors.white} size={16} />
-              <Text className="text-white font-bold">
-                Masuk dengan password saja
-              </Text>
+              <Text className="text-white">Masuk dengan password saja</Text>
             </View>
           </Link>
         </View>

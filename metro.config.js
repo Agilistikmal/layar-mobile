@@ -5,7 +5,7 @@ const { withMonicon } = require("@monicon/metro");
 const config = getDefaultConfig(__dirname);
 
 const configMonicon = withMonicon(config, {
-  collections: ["majesticons"],
+  collections: ["majesticons", "svg-spinners"],
 });
 
 const configNativeWind = withNativeWind(configMonicon, {

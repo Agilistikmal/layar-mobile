@@ -18,10 +18,6 @@ export default function RegisterScreen() {
           </Text>
         </View>
         <View>
-          <Text className="text-2xl text-white font-bold text-center">
-            Daftar
-          </Text>
-
           {/* Form */}
           <View className="mt-2 flex gap-2">
             <View>
