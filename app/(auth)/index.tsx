@@ -3,7 +3,7 @@ import { Images } from "@/constants/images";
 import { APIError } from "@/lib/model/error";
 import { authService } from "@/lib/service/auth_service";
 import Monicon from "@monicon/native";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { useState } from "react";
 import {
   ActivityIndicator,
@@ -35,6 +35,9 @@ export default function LoginScreen() {
           username,
           password,
         });
+        await authService.setLocalAuthToken(res.data);
+
+        router.replace("/(tabs)");
       } catch (err) {
         if (err instanceof APIError) {
           setErrors(err.message);

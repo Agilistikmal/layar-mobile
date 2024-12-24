@@ -1,7 +1,14 @@
-import { Tabs } from "expo-router";
+import { authService } from "@/lib/service/auth_service";
+import { router, Tabs } from "expo-router";
 import React from "react";
 
-export default function AuthLayout() {
+export default async function AuthLayout() {
+  const authToken = await authService.getLocalAuthToken();
+  if (authToken) {
+    router.replace("/(tabs)");
+    return;
+  }
+
   return (
     <Tabs
       screenOptions={{
